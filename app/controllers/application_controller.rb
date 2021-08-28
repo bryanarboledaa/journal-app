@@ -35,13 +35,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # def delete
-  #   @category = Category.find(params[:id])
-  #   if @category.destroy
-  #     redirect_to categories_path
-  #   else :index
-  #   end
-  # end
+  def delete
+    @category = Category.find(params[:id])
+    if @category.destroy
+      redirect_to categories_path
+    else :index
+    end
+  end
 
   private 
   
