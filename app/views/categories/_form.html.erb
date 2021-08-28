@@ -1,0 +1,28 @@
+<%= form_with scope: :category, model: @category, local: true do |f| %>
+
+  <% if @category.errors.any? %>
+  <ul>
+    <% @category.errors.full_messages.each do |message| %>
+      <li><%= message %> </li>
+    <%end%>
+  </ul>
+  <%end%>
+
+  <h1>Create New Category</h1>
+  
+  <p>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name %>
+  </p>
+  
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_field :description %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+    <%= link_to "Cancel", categories_path %> 
+  </p>
+  
+  <% end %>

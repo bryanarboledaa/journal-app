@@ -1,0 +1,17 @@
+<h1> Journal App </h1>
+
+<%= link_to "Create new", categories_new_path %>
+
+<p>Categories:</p>
+
+<tbody>
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %> </td> </br>
+      <td><%= category.description %> </td> </br>
+      <td><%= link_to "View", show_category_path(category) %> </td>
+      <td><%= link_to "Edit", edit_category_path(category.id) %> </td>
+      </br>
+    <tr>
+
+    <% end %>
