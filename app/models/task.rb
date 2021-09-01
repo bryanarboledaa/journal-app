@@ -3,4 +3,5 @@ class Task < ApplicationRecord
 
   validates :task_name, presence: true
   validates :task_description, presence: true
+  
 end

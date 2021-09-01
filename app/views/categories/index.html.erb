@@ -9,11 +9,10 @@
   <% @categories.each do |category| %>
     <tr>
       <td><%= category.name %> </td> 
-      <td><%= link_to "View", category_path(category), method: :get %> </td>
-      <td><%= link_to "Edit", edit_category_path(category.id) %> </td>
-      <td><%= link_to "Delete", category_path(category.id), method: :destroy, data: { confirm: "Are you sure?"} %> </td>
-      <td><%= link_to "View Tasks", category_tasks_path(category.id)  %> </td>
-      </br>
+      <%= link_to "View", category_path(category), method: :get %> 
+      <%= link_to "Edit", edit_category_path(category.id) %> 
+      <%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?"} %> 
+      <%= link_to "View Tasks", category_tasks_path(category.id)  %> 
     <tr>
 
     <% end %>
