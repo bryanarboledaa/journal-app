@@ -1,19 +1,40 @@
+<div class="test-class">
+
+<% @tasks.each do |task| %>
+  <% if task.created_at == Date.today %>
+    <%= task.id %>
+    <%= task.task_name %>
+    <%= task.task_description %>
+  <% end %>
+<% end %>
+
+</div>
+
 <div class="categories-container">
 <h1> Journal App </h1>
 
+<%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+<%= link_to "Sign up", new_user_registration_path %>
+
 <%= link_to "Create new", new_category_path %>
+
 
 <p>Categories:</p>
 
-<tbody>
+
   <% @categories.each do |category| %>
-    <tr>
-      <td><%= category.name %> </td> 
+    <% if category.user == current_user %>
+      <%= category.name %> 
+      <p>User ID: <%= category.user_id %> </p>
       <%= link_to "View", category_path(category), method: :get %> 
       <%= link_to "Edit", edit_category_path(category.id) %> 
       <%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?"} %> 
-      <%= link_to "View Tasks", category_tasks_path(category.id)  %> 
-    <tr>
-
+      <%= link_to "View Tasks", category_tasks_path(category.id) %> 
     <% end %>
+  <% end %>
+
+
+
 </div>
+
