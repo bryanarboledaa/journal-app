@@ -26,21 +26,19 @@
   </br>
   </br>
 
-<div class="list-group">
-<h4>Your Tasks today:</h4>
-<% @tasks.each do |task| %>
-  <% if task.user == current_user %>
-    <% if task.deadline == Date.today %>
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1"><%= task.task_name %></h5> 
-        <h5 class="mb-1">Task ID: <%= task.id %></h5>
-        <small>Due today</small> 
+  <h3>Your tasks today</h3>
+  <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <div class="hr.solid">
+      <% @tasks.each do |task| %>
+        <% if task.user == current_user %>
+          <% if task.deadline == Date.today %>
+    <h5 class="card-title"><%= task.task_name %></h5>
+    <p class="card-text"><%= task.task_description %></p>
+    <% end %>
+    <% end %>
+    <% end %>
     </div>
-    <% end %>
-    <% end %>
-    <% end %>
-  </a>
-  
-</div>
+    </div>
+  </div>
 

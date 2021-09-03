@@ -7,15 +7,16 @@ a:link {
 }
 
 .btn-primary {
-  background-color: black;
-  border-color: black;
-  color: #fa4454;
-}
-
-.btn-primary:hover {
   background-color: #fa4454;
   border-color: #fa4454;
   color: black;
+  
+}
+
+.btn-primary:hover {
+  background-color: black;
+  border-color: black;
+  color: #fa4454;
 }
 
 .card-header {
@@ -24,5 +25,17 @@ a:link {
 }
 
 .dropdown {
-  margin-right: 3vw;
+  margin-right: 2vw;
+}
+
+.mt-3 {
+  background-color: #FEFFED;
+}
+
+.card {
+  border-bottom: 3px solid #bbb;
+}
+
+.card-body {
+  border-bottom: 3px solid #bbb;
 }
