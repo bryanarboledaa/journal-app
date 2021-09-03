@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :get_category
+  before_action :authenticate_user!
 
   def index
     @category_id = params[:category_id]
@@ -53,7 +54,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:task_name, :task_description, :category_id)
+    params.require(:task).permit(:task_name, :task_description, :category_id, :deadline, :user_id)
   end
 
 end

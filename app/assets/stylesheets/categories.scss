@@ -2,22 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
-  overflow: hidden;
-}
+// body {
+//   overflow: hidden;
+//   background-color: #B2FEFA;
+// }
 
-.categories-container {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  background-color: #B2FEFA;
-}
+// .categories_main_container {
+//   height: 100vh;
+//   width: 100vw;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   justify-items: center;
+//   align-items: center;
+// }
 
-.test-class {
-  display: inline;
-}
+// .category_list_container {
+//   display: flex;
+// }
+
+// .tasks_container {
+//   display: flex;
+// }

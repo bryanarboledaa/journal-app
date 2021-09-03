@@ -10,21 +10,21 @@
 
   <h1>Edit Category</h1>
   
-  <p>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
-  </p>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+    <%= f.text_field :name, class: "form-control", id: "exampleInputEmail1" %>
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+    <%= f.text_field :description, class: "form-control", id: "exampleInputEmail1" %>
+  </div>
   
   <p>
-    <%= f.label :description %><br/>
-    <%= f.text_field :description %>
-  </p>
-  
-  <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-outline-success" %>
   </p>
 
   <p>
-      <%= link_to 'Cancel', categories_path %> 
+      <%= link_to 'Cancel', categories_path, class: "btn btn-outline-secondary" %> 
   
   <% end %>

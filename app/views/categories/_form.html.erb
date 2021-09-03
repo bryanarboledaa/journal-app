@@ -10,15 +10,15 @@
 
   <h1>Add New Category</h1>
   
-  <p>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
-  </p>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Category Name</label>
+    <%= f.text_field :name, class: "form-control", id: "exampleInputEmail1" %>
+  </div>
   
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_field :description %>
-  </p>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Category Description</label>
+    <%= f.text_field :description, class: "form-control", id: "exampleInputEmail1" %>
+  </div>
 
   <p>
     <%= f.number_field :user_id, id: :category_user_id, value: current_user.id, type: :hidden %>
@@ -26,8 +26,8 @@
 
   
   <p>
-    <%= f.submit %>
-    <%= link_to "Cancel", categories_path %> 
+    <%= f.submit class: "btn btn-outline-success" %>
+    <%= link_to "Cancel", categories_path, class: "btn btn-outline-secondary" %> 
   </p>
   
   <% end %>

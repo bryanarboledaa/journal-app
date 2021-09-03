@@ -1,9 +1,15 @@
-<p> Task ID: <%= task.id %> </p>
-</br>
-<p> Task: <%= task.task_name %> </p>
-</br>
-<p> Task Description: <%= task.task_description %> </p>
-</br>
-<p> Task Created: <%= task.created_at %> </p>
-
-<%= link_to 'Back', category_tasks_path %>
+<div class="card">
+  <div class="card-header">
+    Task Info
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> <%= task.task_name %> </h5>
+    <p class="card-text">
+      Task ID: <%= task.id %></br>
+      Task Description: <%= task.task_description %></br>
+      Date Created: <%= task.created_at %></br>
+      Task Deadline: <%= task.deadline %>
+    </p>
+    <%= link_to "Back", category_tasks_path, class: "btn btn-outline-secondary" %>
+  </div>
+</div>

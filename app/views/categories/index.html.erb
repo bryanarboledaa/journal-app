@@ -1,40 +1,46 @@
-<div class="test-class">
+<div class="categories_main_container">
 
-<% @tasks.each do |task| %>
-  <% if task.created_at == Date.today %>
-    <%= task.id %>
-    <%= task.task_name %>
-    <%= task.task_description %>
-  <% end %>
-<% end %>
-
+<div class="col-md-8">
+  <div class="row">
+    <% @categories.each do |category| %>
+      <% if category.user == current_user %>
+        <div class="col-md-6">
+          <div class="card mt-3">
+            <div class="card-body">
+              <h3><%= category.name %></h3>
+              <%= link_to "View", category_path(category), method: :get, class: "btn btn-primary" %> 
+              <%= link_to "Edit", edit_category_path(category.id), class: "btn btn-primary" %> 
+              <%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary" %> 
+              <%= link_to "View Tasks", category_tasks_path(category.id), class: "btn btn-primary" %> 
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %> 
+  </div>
 </div>
+  
 
-<div class="categories-container">
-<h1> Journal App </h1>
+  </br>
+  <%= link_to "Create New Category", new_category_path, class: "btn btn-outline-success" %>
+  </br>
+  </br>
 
-<%= link_to "Log in", new_user_session_path %>
-<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-<%= link_to "Sign up", new_user_registration_path %>
-
-<%= link_to "Create new", new_category_path %>
-
-
-<p>Categories:</p>
-
-
-  <% @categories.each do |category| %>
-    <% if category.user == current_user %>
-      <%= category.name %> 
-      <p>User ID: <%= category.user_id %> </p>
-      <%= link_to "View", category_path(category), method: :get %> 
-      <%= link_to "Edit", edit_category_path(category.id) %> 
-      <%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?"} %> 
-      <%= link_to "View Tasks", category_tasks_path(category.id) %> 
+<div class="list-group">
+<h4>Your Tasks today:</h4>
+<% @tasks.each do |task| %>
+  <% if task.user == current_user %>
+    <% if task.deadline == Date.today %>
+  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+    <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><%= task.task_name %></h5> 
+        <h5 class="mb-1">Task ID: <%= task.id %></h5>
+        <small>Due today</small> 
+    </div>
     <% end %>
-  <% end %>
-
-
-
+    <% end %>
+    <% end %>
+  </a>
+  
 </div>
 

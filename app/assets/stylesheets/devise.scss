@@ -1,0 +1,28 @@
+.mb-3 {
+  width: 50vh;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: black;
+  border-color: black;
+  color: #fa4454;
+}
+
+.btn-primary:hover {
+  background-color: #fa4454;
+  border-color: #fa4454;
+  color: black;
+}
+
+.card-header {
+  font-size: large;
+  font-weight: 900;
+}
+
+.dropdown {
+  margin-right: 3vw;
+}

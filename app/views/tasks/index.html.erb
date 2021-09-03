@@ -1,17 +1,21 @@
-<p>Tasks:</p>
-
-<tbody>
-  <% @tasks.each do |task| %>
-    <tr>
-      <td><%= task.task_name %> </td> 
-      <%= link_to 'View Task', category_task_path(task.category_id, task.id) %> 
-      <%= link_to 'Edit Task', edit_category_task_path(task.category_id, task.id) %> 
-      <%= link_to 'Delete Task', category_task_path(task.category_id, task.id), method: :delete, data: { confirm: "Are you sure?" } %> 
-      </br>
-    <tr>
-
-  <% end %>
-
-<%= link_to 'Add New Task', new_category_task_path(@category) %>
+<div class="col-md-8">
+  <div class="row">
+    <% @tasks.each do |task| %>
+      <div class="col-md-6">
+        <div class="card mt-3">
+          <div class="card-body">
+            <h3><%= task.task_name %></h3>
+            <%= link_to 'View Task', category_task_path(task.category_id, task.id), class: "btn btn-primary" %> 
+            <%= link_to 'Edit Task', edit_category_task_path(task.category_id, task.id), class: "btn btn-primary" %> 
+            <%= link_to 'Delete Task', category_task_path(task.category_id, task.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>  
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 </br>
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Add New Task', new_category_task_path(@category), class: "btn btn-outline-success" %>
+</br>
+</br>
+<%= link_to 'Back', categories_path, class: "btn btn-outline-secondary" %>

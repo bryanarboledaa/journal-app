@@ -1,7 +1,14 @@
-<p> ID: <%= category.id %> </p>
-
-<p> Category Name: <%= category.name %> </p>
-
-<p> Description: <%= category.description %> </p>
-
-<%= link_to "Back", categories_path %>
+<div class="card">
+  <div class="card-header">
+    Category Info
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> <%= category.name %> </h5>
+    <p class="card-text">
+      Category ID: <%= category.id %></br>
+      Category Description: <%= category.description %></br>
+      Date Created: <%= category.created_at %> 
+    </p>
+    <%= link_to "Back", categories_path, class: "btn btn-outline-secondary" %>
+  </div>
+</div>
