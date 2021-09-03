@@ -1,24 +1,24 @@
 <div class="categories_main_container">
 
-<div class="col-md-8">
-  <div class="row">
-    <% @categories.each do |category| %>
-      <% if category.user == current_user %>
-        <div class="col-md-6">
-          <div class="card mt-3">
-            <div class="card-body">
-              <h3><%= category.name %></h3>
-              <%= link_to "View", category_path(category), method: :get, class: "btn btn-primary" %> 
-              <%= link_to "Edit", edit_category_path(category.id), class: "btn btn-primary" %> 
-              <%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary" %> 
-              <%= link_to "View Tasks", category_tasks_path(category.id), class: "btn btn-primary" %> 
+  <div class="col-md-8">
+    <div class="row">
+      <% @categories.each do |category| %>
+        <% if category.user == current_user %>
+          <div class="col-md-6">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h3><%= category.name %></h3>
+                <%= link_to "View", category_path(category), method: :get, class: "btn btn-primary" %> 
+                <%= link_to "Edit", edit_category_path(category.id), class: "btn btn-primary" %> 
+                <%= link_to "Delete", category_path(category.id), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-primary" %> 
+                <%= link_to "View Tasks", category_tasks_path(category.id), class: "btn btn-primary" %> 
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    <% end %> 
+        <% end %>
+      <% end %> 
+    </div>
   </div>
-</div>
   
 
   </br>
@@ -28,17 +28,19 @@
 
   <h3>Your tasks today</h3>
   <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <div class="hr.solid">
-      <% @tasks.each do |task| %>
-        <% if task.user == current_user %>
-          <% if task.deadline == Date.today %>
-    <h5 class="card-title"><%= task.task_name %></h5>
-    <p class="card-text"><%= task.task_description %></p>
-    <% end %>
-    <% end %>
-    <% end %>
-    </div>
+    <div class="card-body">
+      <div class="hr.solid">
+        <% @tasks.each do |task| %>
+          <% if task.user == current_user %>
+            <% if task.deadline == Date.today %>
+              <h5 class="card-title"><%= task.task_name %></h5>
+              <p class="card-text"><%= task.task_description %></p>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
+
+</div>
 
