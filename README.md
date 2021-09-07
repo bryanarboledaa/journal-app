@@ -1,5 +1,5 @@
 Created by: Bryan Arboleda
-Heroku link: https://batch9-journal-app.herokuapp.com
+Heroku link: https://batch9-journal-app.herokuapp.com 
 Project name: Journal App
 
 Root/Log in page
