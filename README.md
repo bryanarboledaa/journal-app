@@ -59,7 +59,7 @@ Category > SHOW TASKS
 ![image](https://user-images.githubusercontent.com/80822041/132271892-d38378da-7961-4d9e-9445-4d63825b78d8.png)
 
 
-API Wrapper using Rawg IO
+***API Wrapper using Rawg IO***
 
 First register to https://rawg.io get your API key and use it in your configuration
 
