@@ -18,4 +18,14 @@ Rails.application.routes.draw do
   
   root 'categories#index'
 
+  namespace :api do
+    get '/creator-roles' => 'creator_roles#index'
+    get '/creators' => 'creators#index'
+    get '/developers' => 'developers#index'
+    get '/games' => 'games#index'
+    get '/genres' => 'genres#index'
+    get '/platforms' => 'platforms#index'
+    get '/publishers' => 'publishers#index'
+  end
+
 end
