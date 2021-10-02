@@ -61,6 +61,8 @@ Category > SHOW TASKS
 
 API Wrapper using Rawg IO
 
+First register to https://rawg.io get your API key and use it in your configuration
+
 Resources: 
 
 https://rawg.io/apidocs
@@ -68,9 +70,30 @@ https://api.rawg.io/docs/
 
 Setup:
 
-gem 'rest-client', '~> 2.0.1' 
+Add RestApi to gemfile
 
-Run ```bundle install``` then you're good to go
+```gem 'rest-client', '~> 2.0.1' ```
+
+Run ```bundle install``` 
+
+Available routes:
+
+```api/creator-roles```
+```api/creators```
+```api/developers```
+```api/genres```
+```api/platforms```
+```api/publishers```
+
+Test:
+
+To test out make sure your server is running
+
+```rails s```
+
+In testing I highly suggest to use postman
+
+
 
 
 
