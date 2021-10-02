@@ -59,17 +59,17 @@ Category > SHOW TASKS
 ![image](https://user-images.githubusercontent.com/80822041/132271892-d38378da-7961-4d9e-9445-4d63825b78d8.png)
 
 
-***API Wrapper using Rawg IO***
+#API Wrapper using Rawg IO
 
 First register to https://rawg.io get your API key and use it in your configuration
 
-Resources: 
+***Resources:***
 
 https://rawg.io/apidocs
 
 https://api.rawg.io/docs/
 
-Setup:
+***Setup:***
 
 Add RestApi to gemfile
 
@@ -77,7 +77,7 @@ Add RestApi to gemfile
 
 Run ```bundle install``` 
 
-Available routes:
+***Available routes:***
 
 ```api/creator-roles```
 
@@ -91,7 +91,7 @@ Available routes:
 
 ```api/publishers```
 
-Test:
+***Test:***
 
 To test out make sure your server is running
 
