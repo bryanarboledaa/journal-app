@@ -59,6 +59,22 @@ Category > SHOW TASKS
 ![image](https://user-images.githubusercontent.com/80822041/132271892-d38378da-7961-4d9e-9445-4d63825b78d8.png)
 
 
+API Wrapper using Rawg IO
+
+Resources: 
+
+https://rawg.io/apidocs
+https://api.rawg.io/docs/
+
+Setup:
+
+gem 'rest-client', '~> 2.0.1' 
+
+Run ```bundle install``` then you're good to go
+
+
+
+
 
 
 
