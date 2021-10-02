@@ -66,6 +66,7 @@ First register to https://rawg.io get your API key and use it in your configurat
 Resources: 
 
 https://rawg.io/apidocs
+
 https://api.rawg.io/docs/
 
 Setup:
@@ -79,10 +80,15 @@ Run ```bundle install```
 Available routes:
 
 ```api/creator-roles```
+
 ```api/creators```
+
 ```api/developers```
+
 ```api/genres```
+
 ```api/platforms```
+
 ```api/publishers```
 
 Test:
