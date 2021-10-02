@@ -71,7 +71,7 @@ https://api.rawg.io/docs/
 
 ***Setup:***
 
-Add RestApi to gemfile
+Add rest-client to gemfile
 
 ```gem 'rest-client', '~> 2.0.1' ```
 
