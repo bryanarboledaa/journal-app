@@ -91,7 +91,7 @@ To test out make sure your server is running
 
 ```rails s```
 
-In testing I highly suggest to use postman
+In testing I highly suggest to use postman.
 
 
 
